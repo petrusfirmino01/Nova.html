@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- Carregamento do CSS e Favicon via Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div class="topo">🇧🇷 Calculadora</div>
+    <header>
+        <h2>Calculadora</h2>
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('calculadora') }}">Calculadora</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
+    <main class="inicio">
+        <div class="texto-inicio">
+            <p class="rota">BEM-VINDO</p>
+            <h1>Vamos fazer<br>uma conta?</h1>
+            <p class="descricao">Uma calculadora simples para realizar operações matemáticas.</p>
+            <a href="{{ url_for('calculadora') }}" class="botao">Começar</a>
+        </div>
+    </main>
+</body>
+</html>

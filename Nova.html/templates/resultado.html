@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div class="topo">🇧🇷 Resultado</div>
+    <header>
+        <h2>Calculadora</h2>
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('calculadora') }}">Calculadora</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <section class="resultado">
+            <p class="rota">ROTA 02 · RESULTADO</p>
+            
+            <!-- Os valores abaixo são injetados pelo app.py -->
+            <h1 id="tituloOperacao">{{ nome_operacao }}</h1>
+            
+            <p id="conta" class="conta">
+                {{ numero1 }} {{ operacao }} {{ numero2 }}
+            </p>
+            
+            <div id="valorResultado" class="numero-resultado">
+                {{ resultado }}
+            </div>
+
+            <div class="botoes">
+                <a href="{{ url_for('calculadora') }}" class="botao">Nova conta</a>
+                <a href="{{ url_for('index') }}" class="botao botao-secundario">Voltar ao início</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

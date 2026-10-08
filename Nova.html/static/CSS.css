@@ -1,0 +1,480 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        120deg,
+        #f5f7f8,
+        #e9f4f4
+    );
+
+    color: #17212b;
+}
+
+
+/* BARRA SUPERIOR */
+
+.topo {
+    height: 32px;
+
+    border: 1px solid #d5dadd;
+    border-radius: 20px;
+
+    margin: 3px 7px;
+
+    text-align: center;
+
+    font-size: 13px;
+
+    padding: 6px;
+
+    color: #555;
+}
+
+
+/* CABEÇALHO */
+
+header {
+
+    width: 88%;
+
+    margin: 25px auto 0;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #d5dadd;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+header h2 {
+
+    font-family: Georgia, serif;
+
+    font-size: 23px;
+
+    color: #075b66;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 25px;
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: #59666d;
+
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+}
+
+
+nav a:hover {
+
+    background-color: #dceff0;
+
+    color: #075b66;
+
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+
+    width: 88%;
+
+    margin: 70px auto;
+
+}
+
+
+/* PÁGINA INICIAL */
+
+.inicio {
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+.texto-inicio {
+
+    max-width: 750px;
+}
+
+
+.rota {
+
+    color: #087080;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    font-size: 13px;
+}
+
+
+h1 {
+
+    font-family: Georgia, serif;
+
+    font-size: 70px;
+
+    line-height: 0.95;
+
+    margin: 20px 0;
+
+}
+
+
+.descricao {
+
+    color: #68747a;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* BOTÕES */
+
+.botao {
+
+    display: inline-block;
+
+    background-color: #076673;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 15px 25px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.botao:hover {
+
+    background-color: #054f59;
+
+}
+
+
+.botao-secundario {
+
+    background-color: white;
+
+    color: #076673;
+
+    border: 2px solid #83b7bd;
+
+    margin-left: 10px;
+
+}
+
+
+.botao-secundario:hover {
+
+    background-color: #edf8f9;
+
+}
+
+
+/* TÍTULO DA CALCULADORA */
+
+.titulo {
+
+    margin-bottom: 40px;
+}
+
+
+.titulo h1 {
+
+    font-size: 65px;
+
+    margin: 15px 0;
+}
+
+
+.titulo > p:last-child {
+
+    color: #68747a;
+
+}
+
+
+/* CAIXA DA CALCULADORA */
+
+.caixa-calculadora {
+
+    background-color: white;
+
+    border: 1px solid #d9e0e2;
+
+    border-radius: 10px;
+
+    padding: 40px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+.caixa-calculadora form {
+
+    display: flex;
+
+    align-items: end;
+
+    justify-content: center;
+
+    gap: 12px;
+}
+
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 250px;
+}
+
+
+.campo label {
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #59666d;
+
+    margin-bottom: 8px;
+}
+
+
+.campo input,
+.campo select {
+
+    height: 50px;
+
+    border: 1px solid #cbd5d8;
+
+    border-radius: 6px;
+
+    padding: 0 14px;
+
+    font-size: 16px;
+
+    background-color: white;
+}
+
+
+.campo input:focus,
+.campo select:focus {
+
+    outline: none;
+
+    border: 2px solid #087080;
+
+}
+
+
+.caixa-calculadora .botao {
+
+    height: 50px;
+}
+
+
+.aviso {
+
+    color: #7a858a;
+
+    font-size: 13px;
+
+    margin-left: 5px;
+
+    margin-top: 18px;
+}
+
+
+/* RESULTADO */
+
+.resultado {
+
+    background-color: white;
+
+    border: 1px solid #d9e0e2;
+
+    border-radius: 10px;
+
+    min-height: 420px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+
+.resultado h1 {
+
+    font-size: 75px;
+
+    margin: 15px 0;
+
+}
+
+
+.conta {
+
+    font-size: 20px;
+
+    color: #68747a;
+
+    margin: 0;
+}
+
+
+.numero-resultado {
+
+    font-family: Georgia, serif;
+
+    font-size: 85px;
+
+    font-weight: bold;
+
+    color: #056675;
+
+    margin: 25px 0 35px;
+}
+
+
+.botoes {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    header {
+
+        width: 92%;
+
+    }
+
+    main {
+
+        width: 92%;
+
+        margin: 40px auto;
+
+    }
+
+    h1 {
+
+        font-size: 50px;
+
+    }
+
+    .titulo h1 {
+
+        font-size: 50px;
+
+    }
+
+    .caixa-calculadora form {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+    .campo {
+
+        width: 100%;
+
+    }
+
+    .caixa-calculadora .botao {
+
+        width: 100%;
+
+    }
+
+    nav {
+
+        gap: 5px;
+
+    }
+
+    nav a {
+
+        padding: 8px;
+
+    }
+
+    .resultado h1 {
+
+        font-size: 50px;
+
+    }
+
+    .numero-resultado {
+
+        font-size: 65px;
+
+    }
+
+}

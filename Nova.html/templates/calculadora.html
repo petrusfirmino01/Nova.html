@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <div class="topo">🇧🇷 Calculadora</div>
+    <header>
+        <h2>Calculadora</h2>
+        <nav>
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('calculadora') }}">Calculadora</a>
+            <a href="#">Sobre</a>
+        </nav>
+    </header>
+    <main>
+        <section class="titulo">
+            <p class="rota">ROTA 01 · ENTRADA</p>
+            <h1>Qual conta<br>vamos resolver?</h1>
+            <p>Informe os dois valores e escolha a operação desejada.</p>
+        </section>
+        <section class="caixa-calculadora">
+            <!-- A action agora aponta para a rota resultado no Flask -->
+            <form action="{{ url_for('resultado') }}" method="GET">
+                <div class="campo">
+                    <label for="numero1">Primeiro número</label>
+                    <input type="number" id="numero1" name="numero1" placeholder="Ex.: 20" required>
+                </div>
+                <div class="campo">
+                    <label for="operacao">Operação</label>
+                    <select id="operacao" name="operacao" required>
+                        <option value="+">+ Adição</option>
+                        <option value="-">- Subtração</option>
+                        <option value="*">* Multiplicação</option>
+                        <option value="/">/ Divisão</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="numero2">Segundo número</label>
+                    <input type="number" id="numero2" name="numero2" placeholder="Ex.: 5" required>
+                </div>
+                <button type="submit" class="botao">Calcular</button>
+            </form>
+            <p class="aviso">Use apenas números. Todos os campos são obrigatórios.</p>
+        </section>
+    </main>
+</body>
+</html>
